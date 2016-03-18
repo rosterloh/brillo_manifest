@@ -25,7 +25,6 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <project path="abi/cpp" name="platform/abi/cpp" groups="bdk" />
   <project path="bionic" name="platform/bionic" groups="bdk" />
   <project path="bootable/recovery" name="platform/bootable/recovery" groups="bdk" />
   <project path="device/generic/arm64" name="device/generic/arm64" groups="bdk" />
@@ -94,6 +93,7 @@
   <project path="external/libweave" name="platform/external/libweave" groups="bdk" />
   <project path="external/llvm" name="platform/external/llvm" groups="bdk" />
   <project path="external/lzma" name="platform/external/lzma" groups="bdk" />
+  <project path="external/lzop" name="platform/external/lzop" groups="bdk" />
   <project path="external/minijail" name="platform/external/minijail" groups="bdk" />
   <project path="external/mksh" name="platform/external/mksh" groups="bdk" />
   <project path="external/modp_b64" name="platform/external/modp_b64" groups="bdk" />
