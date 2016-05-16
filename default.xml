@@ -8,7 +8,7 @@
            sync-j="4" />
   <!-- Brillo-specific build tooling -->
   <project path="device/generic/brillo" name="device/generic/brillo" groups="bdk" />
-  <project path="tools/bdk" name="platform/tools/bdk" groups="bdk" />
+  <project path="tools/bdk" name="platform/tools/bdk" groups="bdk,bdk-cli" />
   <project path="external/gentoo/integration" name="platform/external/gentoo/integration" groups="bdk" />
   <project path="external/gentoo/overlays/gentoo" name="platform/external/gentoo/overlays/gentoo" groups="bdk" clone-depth="1" />
   <project path="external/gentoo/portage" name="platform/external/gentoo/portage" groups="bdk" />
@@ -31,12 +31,12 @@
   <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="bdk" />
   <project path="device/generic/common" name="device/generic/common" groups="bdk" />
   <project path="device/generic/goldfish" name="device/generic/goldfish" groups="bdk" />
-  <project path="device/generic/mini-emulator-arm64" name="device/generic/mini-emulator-arm64" groups="bdk" />
-  <project path="device/generic/mini-emulator-armv7-a-neon" name="device/generic/mini-emulator-armv7-a-neon" groups="bdk" />
-  <project path="device/generic/mini-emulator-x86" name="device/generic/mini-emulator-x86" groups="bdk" />
-  <project path="device/generic/mini-emulator-x86_64" name="device/generic/mini-emulator-x86_64" groups="bdk" />
-  <project path="device/generic/x86" name="device/generic/x86" groups="bdk" />
-  <project path="device/generic/x86_64" name="device/generic/x86_64" groups="bdk" />
+  <!-- <project path="device/generic/mini-emulator-arm64" name="device/generic/mini-emulator-arm64" groups="bdk" /> -->
+  <!-- <project path="device/generic/mini-emulator-armv7-a-neon" name="device/generic/mini-emulator-armv7-a-neon" groups="bdk" /> -->
+  <!-- <project path="device/generic/mini-emulator-x86" name="device/generic/mini-emulator-x86" groups="bdk" /> -->
+  <!-- <project path="device/generic/mini-emulator-x86_64" name="device/generic/mini-emulator-x86_64" groups="bdk" /> -->
+  <!-- <project path="device/generic/x86" name="device/generic/x86" groups="bdk" /> -->
+  <!-- <project path="device/generic/x86_64" name="device/generic/x86_64" groups="bdk" /> -->
   <project path="external/aac" name="platform/external/aac" groups="bdk" />
   <project path="external/avahi" name="platform/external/avahi" groups="bdk" />
   <project path="external/autotest" name="platform/external/autotest" groups="bdk" />
@@ -75,6 +75,7 @@
   <project path="external/libcap" name="platform/external/libcap" groups="bdk" />
   <project path="external/libcap-ng" name="platform/external/libcap-ng" groups="bdk" />
   <project path="external/libchrome" name="platform/external/libchrome" groups="bdk" />
+  <project path="external/libconstrainedcrypto" name="platform/external/libconstrainedcrypto" groups="bdk" />
   <project path="external/libcxx" name="platform/external/libcxx" groups="bdk" />
   <project path="external/libcxxabi" name="platform/external/libcxxabi" groups="bdk" />
   <project path="external/libdivsufsort" name="platform/external/libdivsufsort" groups="bdk" />
@@ -92,6 +93,7 @@
   <project path="external/libvpx" name="platform/external/libvpx" groups="bdk" />
   <project path="external/libweave" name="platform/external/libweave" groups="bdk" />
   <project path="external/llvm" name="platform/external/llvm" groups="bdk" />
+  <project path="external/lz4" name="platform/external/lz4" groups="bdk" />
   <project path="external/lzma" name="platform/external/lzma" groups="bdk" />
   <project path="external/lzop" name="platform/external/lzop" groups="bdk" />
   <project path="external/minijail" name="platform/external/minijail" groups="bdk" />
@@ -102,7 +104,6 @@
   <project path="external/rootdev" name="platform/external/rootdev" groups="bdk" />
   <project path="external/safe-iop" name="platform/external/safe-iop" groups="bdk" />
   <project path="external/selinux" name="platform/external/selinux" groups="bdk" />
-  <project path="external/sepolicy" name="platform/external/sepolicy" groups="bdk" />
   <project path="external/shflags" name="platform/external/shflags" groups="bdk" />
   <project path="external/sonic" name="platform/external/sonic" groups="bdk" />
   <project path="external/sonivox" name="platform/external/sonivox" groups="bdk" />
@@ -134,12 +135,13 @@
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="bdk" />
   <project path="libnativehelper" name="platform/libnativehelper" groups="bdk" />
   <project path="prebuilts/android-emulator" name="platform/prebuilts/android-emulator" clone-depth="1" groups="bdk" />
+  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" groups="bdk" clone-depth="1" />
   <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" groups="linux,bdk" />
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="linux,arm,bdk" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" groups="linux,arm,bdk" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" groups="linux,bdk" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8"  groups="linux,bdk" />
-  <project path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" groups="linux,mips,bdk" />
+  <!-- <project path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" groups="linux,mips,bdk" /> -->
   <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" groups="linux,x86,bdk" />
   <project path="prebuilts/gdb/linux-x86" name="platform/prebuilts/gdb/linux-x86" groups="linux,bdk" />
   <!-- <project path="prebuilts/go/darwin-x86" name="platform/prebuilts/go/darwin-x86" groups="darwin,bdk" /> -->
@@ -166,7 +168,9 @@
   <project path="system/peripheralmanager" name="platform/system/peripheralmanager" groups="bdk" />
   <project path="system/netd" name="platform/system/netd" groups="bdk" />
   <project path="system/security" name="platform/system/security" groups="bdk" />
+  <project path="system/sepolicy" name="platform/system/sepolicy" groups="bdk" />
   <project path="system/tools/aidl" name="platform/system/tools/aidl" groups="bdk" />
+  <project path="system/tools/bpt" name="platform/system/tools/bpt" groups="bdk" />
   <project path="system/tpm" name="platform/system/tpm" groups="bdk" />
   <project path="system/update_engine" name="platform/system/update_engine" groups="bdk" />
   <project path="system/weaved" name="platform/system/weaved" groups="bdk" />
@@ -180,7 +184,6 @@
   <!-- <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="edison" /> -->
   <!-- Intel MinnowBoard -->
   <!-- <project path="device/intel/minnowboard" name="device/intel/minnowboard" groups="minnowboard" /> -->
-  <!-- <project path="hardware/bsp/kernel/intel/minnowboard-3.14" name="platform/hardware/bsp/kernel/intel/minnowboard-v3.14" groups="minnowboard" /> -->
   <!-- Qualcomm Dragonboard -->
   <project path="device/qcom/dragonboard" name="device/qcom/dragonboard" groups="dragonboard" />
   <project path="hardware/bsp/qcom" name="platform/hardware/bsp/qcom" groups="dragonboard" />
